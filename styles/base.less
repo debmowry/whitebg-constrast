@@ -247,8 +247,8 @@ atom-text-editor.is-focused .line-number.cursor-line-no-selection, atom-text-edi
 // CSS
 
 .comment.block.css {
-  font-style: italic;
   color: @orange;
+  font-style: italic;
 }
 .constant.numeric.css { color: @blue; }
 .constant.other.color.rgb-value.css { color: @blue; }
@@ -258,18 +258,30 @@ atom-text-editor.is-focused .line-number.cursor-line-no-selection, atom-text-edi
 .entity.name.tag.sass,
 .entity.name.tag.scss { color: @maroon; }
 
-.entity.name.tag.reference.scss { color: #9D1521; }
-
 .entity.other.attribute-name.class.css,
 .entity.other.attribute-name.id.css { color: @maroon; }
 
-.entity.other.attribute-name.pseudo-class.css { color: @magenta; }
+.entity.other.attribute-name.pseudo-class.css,
+.entity.other.attribute-name.pseudo-class.sass,
+.entity.other.attribute-name.pseudo-class.scss {
+  color: @purple;
+  background: @light-purple;
+}
 
-.invalid.deprecated.color.w3c-non-standard-color-name.css { color: #DD0003; }
+.meta.at-rule.media.css,
+.meta.at-rule.media.sass,
+.meta.at-rule.media.scss {
+  color: @purple;
+  background: @light-purple;
+}
 
 .meta.property-name.css { color: @black; }
-
-.meta.selector.css { color: #FF00FF; }
+.meta.attribute-selector.css,
+.meta.attribute-selector.sass,
+.meta.attribute-selector.scss {
+  color: @purple;
+  background: @light-magenta;
+}
 
 .punctuation.definition.comment.css {
   font-weight: bold;
@@ -299,9 +311,15 @@ atom-text-editor.is-focused .line-number.cursor-line-no-selection, atom-text-edi
   background: @light-green-background;
 }
 
+.support.function.misc.css,
+.support.function.misc.sass,
+.support.function.misc.scss,
 .support.function.url.css,
 .support.function.url.sass,
-.support.function.url.scss { color: @cyan; }
+.support.function.url.scss {
+  color: @cyan;
+  background: @light-green-background;
+}
 
 .support.type.property-name.css,
 .support.type.property-name.sass,
