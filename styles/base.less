@@ -58,11 +58,11 @@ atom-text-editor.is-focused .line-number.cursor-line-no-selection, atom-text-edi
 .console.warning { color: #CCCC33; }
 .console.debug { color: #FFEC8B; }
 
-.markup.deleted { color: @white; background-color: @red; }
-.markup.inserted { color: @black; background-color: @lime; }
-.markup.changed { color: @white; background-color: @light-orange; }
-.markup.underline { color: @black; text-decoration: underline; }
 .markup.bold { color: @black; font-weight: bold; }
+.markup.changed { color: @white; background-color: @light-orange; }
+.markup.deleted { color: @white; background-color: @red; }
+.markup.hyperlink { color: @purple; background-color: @light-purple; }
+.markup.inserted { color: @black; background-color: @lime; }
 .markup.italic { color: @black; font-style: italic; }
 
 .meta.diff.range {
@@ -126,12 +126,14 @@ atom-text-editor.is-focused .line-number.cursor-line-no-selection, atom-text-edi
   background-color: @light-green-background;
 }
 
+.entity.name.function.php { color: @purple; background: @light-magenta;}
+
 .meta.function.php {
   color: @green;
   font-weight: bold;
 }
 
-.meta.function-call.php { color: @red; }
+.meta.function-call.php { color: @maroon; background: @light-magenta; font-weight: bold;}
 
 .meta.function-call.object.php {
   color: @cyan;
@@ -165,10 +167,10 @@ atom-text-editor.is-focused .line-number.cursor-line-no-selection, atom-text-edi
   color: @dark-blue;
   font-style: italic;
 }
-/*.variable.other.php {
+.variable.other.php {
   color: @cyan;
   background-color: @light-cyan-background;
-}*/
+}
 .support.function.construct.php {
   color: #A00047;
   background-color: #FFE6F2;
@@ -178,10 +180,10 @@ atom-text-editor.is-focused .line-number.cursor-line-no-selection, atom-text-edi
   color: @maroon;
   font-weight: bold;
 }
-/*.variable.other.php {
+.variable.other.php {
   color: @cyan;
   background: @light-cyan-background;
-}*/
+}
 .variable.other.property.php {
   color: @dark-yellow;
   background-color: @light-yellow;
