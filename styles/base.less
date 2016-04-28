@@ -49,7 +49,7 @@ atom-text-editor.is-focused .selection .region, :host(.is-focused) .selection .r
 }
 
 atom-text-editor.is-focused .line-number.cursor-line-no-selection, atom-text-editor.is-focused .line.cursor-line, :host(.is-focused) .line-number.cursor-line-no-selection, :host(.is-focused) .line.cursor-line {
-  background-color: @light-blue-background;
+  background-color: @light-blue;
 }
 
 .console.error { color: @red; }
@@ -65,29 +65,11 @@ atom-text-editor.is-focused .line-number.cursor-line-no-selection, atom-text-edi
 .markup.inserted { color: @black; background-color: @lime; }
 .markup.italic { color: @black; font-style: italic; }
 
-.meta.diff.range {
-  font-style: italic;
-  color: @white;
-  background-color: #3467D1;
-}
-.meta.diff.index {
-  font-style: italic;
-  color: @white;
-  background-color: #3467D1;
-}
-.meta.separator.diff {
-  font-style: italic;
-  color: @white;
-  background-color: #3467D1;
-}
-.meta.diff.header {
-  color: @white;
-  background-color: #5685E3;
-}
-.meta.separator {
-  color: @white;
-  background-color: #3467D1;
-}
+.meta.diff.header,
+.meta.diff.index,
+.meta.diff.range,
+.meta.separator,
+.meta.separator.diff { font-style: italic; color: @white; background-color: #3467D1; }
 
 .constant.language { color: @maroon; }
 .constant.numeric { color: @blue; }
@@ -113,81 +95,31 @@ atom-text-editor.is-focused .line-number.cursor-line-no-selection, atom-text-edi
 .comment {
   color: @orange;
   font-style: italic;
+  font-weight: normal;
 }
 
 // PHP
 
 .text.html.php { color: @maroon; }
-
 .comment.block.documentation.phpdoc.php { color: @gray; }
-
-.keyword.operator.class.php {
-  color: @cyan;
-  background-color: @light-green-background;
-}
-
-.entity.name.function.php { color: @purple; background: @light-magenta;}
-
-.meta.function.php {
-  color: @green;
-  font-weight: bold;
-}
-
-.meta.function-call.php { color: @maroon; background: @light-magenta; font-weight: bold;}
-
-.meta.function-call.object.php {
-  color: @cyan;
-  background-color: @light-green-background;
-}
-.punctuation.section.embedded.begin.php {
-  color: @maroon;
-  font-weight: bold;
-}
-
-.punctuation.section.embedded.end.php {
-  color: @maroon;
-  font-weight: bold;
-}
-
+.entity.name.function.php { color: @purple; background-color: @light-magenta;}
+.keyword.operator.class.php { color: @cyan; background-color: @light-green; }
+.meta.function.php { color: @green; font-weight: bold; }
+.meta.function-call.php { color: @maroon; background-color: @light-magenta; font-weight: bold; }
+.meta.function-call.object.php { color: @cyan; background-color: @light-green; }
+.punctuation.section.embedded.begin.php { color: @maroon; font-weight: bold; }
+.punctuation.section.embedded.end.php { color: @maroon; font-weight: bold; }
 .punctuation.terminator.expression.php { color: @purple; }
-
+.source.php { font-weight: bold; }
 .storage.modifier.public.php { color: @dark-blue; }
-
-.storage.type.class.php {
-  color: #30C392;
-  background-color: #F2F2F2;
-}
-
-.string.quoted.single.php {
-  color: @dark-blue;
-  background-color: @light-blue-background;
-}
-
-.string.quoted.double.php {
-  color: @dark-blue;
-  font-style: italic;
-}
-.variable.other.php {
-  color: @cyan;
-  background-color: @light-cyan-background;
-}
-.support.function.construct.php {
-  color: #A00047;
-  background-color: #FFE6F2;
-}
+.storage.type.class.php { color: #30C392; background-color: #F2F2F2; }
+.string.quoted.single.php { color: @dark-blue; background-color: @light-blue; font-weight: normal; }
+.string.quoted.double.php { color: @dark-blue; background-color: @light-blue; font-weight: normal; }
+.support.function.construct.php { color: #A00047; background-color: #FFE6F2; }
 .support.function.php { color: #CC0008; }
-.variable.other.global.safer.php {
-  color: @maroon;
-  font-weight: bold;
-}
-.variable.other.php {
-  color: @cyan;
-  background: @light-cyan-background;
-}
-.variable.other.property.php {
-  color: @dark-yellow;
-  background-color: @light-yellow;
-}
+.variable.other.global.safer.php { color: @maroon; font-weight: bold; }
+.variable.other.php { color: @cyan; background-color: @light-cyan; }
+.variable.other.property.php { color: @dark-yellow; background-color: @light-yellow; }
 
 // HTML
 
@@ -221,14 +153,14 @@ atom-text-editor.is-focused .line-number.cursor-line-no-selection, atom-text-edi
 .entity.other.attribute-name.pseudo-class.sass,
 .entity.other.attribute-name.pseudo-class.scss {
   color: @purple;
-  background: @light-purple;
+  background-color: @light-purple;
 }
 
 .meta.at-rule.media.css,
 .meta.at-rule.media.sass,
 .meta.at-rule.media.scss {
   color: @purple;
-  background: @light-purple;
+  background-color: @light-purple;
 }
 
 .meta.property-name.css { color: @black; }
@@ -237,7 +169,7 @@ atom-text-editor.is-focused .line-number.cursor-line-no-selection, atom-text-edi
 .meta.attribute-selector.sass,
 .meta.attribute-selector.scss {
   color: @purple;
-  background: @light-magenta;
+  background-color: @light-magenta;
 }
 
 .punctuation.definition.comment.css {
@@ -258,14 +190,14 @@ atom-text-editor.is-focused .line-number.cursor-line-no-selection, atom-text-edi
 .support.constant.font-name.sass,
 .support.constant.font-name.scss {
   color: @dark-yellow;
-  background: @light-yellow;
+  background-color: @light-yellow;
 }
 
 .support.constant.property-value.css,
 .support.constant.property-value.sass,
 .support.constant.property-value.scss {
   color: @cyan;
-  background: @light-green-background;
+  background-color: @light-green;
 }
 
 .support.function.misc.css,
@@ -275,7 +207,7 @@ atom-text-editor.is-focused .line-number.cursor-line-no-selection, atom-text-edi
 .support.function.url.sass,
 .support.function.url.scss {
   color: @cyan;
-  background: @light-green-background;
+  background-color: @light-green;
 }
 
 .support.type.property-name.css,
