@@ -216,12 +216,15 @@ atom-text-editor.is-focused .line-number.cursor-line-no-selection, atom-text-edi
 
 // Javascript
 
+.constant.language.boolean.true.js { color: @purple; background: @light-purple}
 .constant.numeric.js { color: #004080; }
-.punctuation.terminator.statement.js { color: #5C5C5C; }
+.entity.name.function.js { color: @orange; font-weight: bold; }
 .keyword.control.js { color: #0000C0; font-weight: bold; }
-.keyword.operator.js { color: #5C5C5C; }
+.keyword.operator.js { color: @blue; }
 .keyword.other.js { color: #0000C0; font-weight: bold; }
-.string.quoted.single.js { color: #005C00; }
-.string.quoted.double.js { color: #005C00; }
-.string.regexp.js { color: #800040; }
 .meta.documentation.tag.js { color: #7272C2; font-weight: bold; }
+.punctuation.terminator.statement.js { color: #5C5C5C; }
+.string.quoted.single.js,
+.string.quoted.double.js { color: @mid-green; font-weight: bold; }
+.string.regexp.js { color: #800040; }
+.support.class.js { color: @purple-blue; font-weight: bold; }
